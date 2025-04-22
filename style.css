@@ -1,0 +1,130 @@
+:root {
+  --bg: #121212;
+  --panel: #1e1e1e;
+  --text: #e0e0e0;
+  --accent: #00ffc3;
+  --accent-dark: #009f8a;
+  --card: #2a2a2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+  text-shadow: 0 0 5px var(--accent-dark);
+}
+
+form {
+  background-color: var(--panel);
+  border: 1px solid var(--accent-dark);
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input,
+textarea,
+button {
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  padding: 0.6rem;
+  background: #333;
+  color: var(--text);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-dark);
+}
+
+button {
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+.board {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.column {
+  background-color: var(--panel);
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1rem;
+  flex: 1 1 300px;
+  max-width: 33%;
+  min-height: 300px;
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.1);
+}
+
+.column h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.task {
+  background-color: var(--card);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 255, 200, 0.2);
+}
+
+.task-title {
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.task-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.task-buttons button {
+  background: #444;
+  color: var(--text);
+  padding: 0.3rem 0.5rem;
+  flex: 1 1 45%;
+  border-radius: 4px;
+}
+
+.task-buttons button:hover {
+  background: var(--accent-dark);
+}
+
+textarea {
+  resize: vertical;
+}
